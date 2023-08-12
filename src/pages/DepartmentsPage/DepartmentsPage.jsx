@@ -21,8 +21,13 @@ const DepartmentsPage = () => {
     <div className="departments">
       {departments.map((dept, i) => (
         <div key={i} onClick={() => handleClick(dept)}>
-          <NavLink to="/productList">{dept}</NavLink>
-          </div>
+          <NavLink
+            to="/productList"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            {dept}
+          </NavLink>
+        </div>
       ))}
     </div>
   );
