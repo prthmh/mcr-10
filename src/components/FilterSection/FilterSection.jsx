@@ -20,7 +20,8 @@ const FilterSection = () => {
   return (
     <div className="filters">
       <h2>Products</h2>
-      <select onChange={handleDepartmentChange}>
+      <select onChange={handleDepartmentChange} style={{fontFamily: "inherit"}} >
+        <option>Select Department</option>
         <option value="all">All Departments</option>
         <option value="Kitchen">Kitchen</option>
         <option value="Clothing">Clothing</option>
@@ -30,8 +31,8 @@ const FilterSection = () => {
         <input type="checkbox" onChange={handleLowStock} />
         Low Stock
       </label>
-      <select onChange={handlePropertySort}>
-        <option></option>
+      <select onChange={handlePropertySort}  style={{fontFamily: "inherit"}}>
+        <option>Select Property</option>
         <option value="name">Name</option>
         <option value="price">Price</option>
         <option value="stock">Stock</option>

@@ -20,7 +20,7 @@ const AddNewProduct = () => {
     sku: "",
     supplier: "",
     delivered: 0,
-    imageUrl: '',
+    imageUrl: "",
   });
   const handleChange = (e) =>
     setFormData((prevState) => ({
@@ -52,7 +52,7 @@ const AddNewProduct = () => {
       sku: "",
       supplier: "",
       delivered: 0,
-      imageUrl: '',
+      imageUrl: "",
     });
   };
 
@@ -64,6 +64,7 @@ const AddNewProduct = () => {
         <label className="form_label">
           Department
           <select
+            style={{ fontFamily: "inherit" }}
             className="form_input"
             name="department"
             onChange={handleChange}
@@ -145,7 +146,9 @@ const AddNewProduct = () => {
             onChange={handleChange}
           />
         </label>
-        <button type="submit" className="add_button" >Add Product</button>
+        <button type="submit" className="add_button">
+          Add Product
+        </button>
       </form>
     </div>
   );

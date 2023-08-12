@@ -6,6 +6,8 @@
   gap: 4rem;
   height: 100%;
   padding: 2rem;
+  position: fixed;
+  width: 10rem;
 }
 .nav_element {
   text-decoration: none;

@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+html {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
 * {
   margin: 0;
 }
@@ -5,7 +9,7 @@
 .add_button {
   background-color: #2563eb;
   border: none;
-  font-style: inherit;
+  font-family: inherit;
   color: white;
   padding: 0.5rem;
   border-radius: 0.6rem;
