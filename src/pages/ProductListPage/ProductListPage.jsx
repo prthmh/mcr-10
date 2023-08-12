@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ProductListPage.css";
 import FilterSection from "../../components/FilterSection/FilterSection";
 import { useData } from "../../context/DataContext";
 
 const ProductListPage = () => {
   const {
-    dataState: { items },
+    dataState: { items, filters },
     getSortedList,
   } = useData();
-  const output = getSortedList(items);
+  const [output, setOutput] = useState(items);
+  useEffect(() => {
+    setOutput(getSortedList(items));
+  }, [filters]);
   return (
     <div>
       <FilterSection />

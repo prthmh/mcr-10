@@ -1,0 +1,6 @@
+.departments {
+  display: flex;
+  gap: 4rem;
+  font-size: 3rem;
+  margin-left: 10rem;
+}
