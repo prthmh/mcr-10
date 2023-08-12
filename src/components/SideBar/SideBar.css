@@ -1,0 +1,15 @@
+.sidebar {
+  background-color: #18181b;
+  color: #71717a;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  height: 100%;
+  padding: 2rem;
+}
+.nav_element {
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+  font-size: 24px;
+}

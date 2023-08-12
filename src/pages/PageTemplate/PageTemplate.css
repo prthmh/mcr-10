@@ -1,0 +1,11 @@
+.page_template {
+  display: flex;
+  height: 100vh;
+}
+.nav_section {
+  flex-basis: 15%;
+}
+.children {
+  flex-basis: 80%;
+  padding: 2rem;
+}
