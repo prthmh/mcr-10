@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import { inventoryData } from "../data";
 import { dataReducer } from "../reducer";
 import { getTotStock } from "../utils/getTotStock";
@@ -18,7 +18,6 @@ export const DataProvider = ({ children }) => {
   // console.log(dataState);
   const { sortType, departmentType, lowStock, propertyType } =
     dataState.filters;
-  console.log(sortType, departmentType, lowStock, propertyType);
 
   const getSortedList = (data) => {
     let tempData = data;
@@ -51,6 +50,15 @@ export const DataProvider = ({ children }) => {
 
     return tempData;
   };
+
+  useEffect(() => {
+    const stateInStorage = JSON.parse(localStorage.getItem("mcr10"));
+    if (stateInStorage) {
+      dataDispatch({ type: "SET_STATE", payload: stateInStorage });
+    } else {
+      dataDispatch({ type: "SET_STATE", payload: dataState });
+    }
+  }, []);
 
   return (
     <DataContext.Provider value={{ dataState, dataDispatch, getSortedList }}>

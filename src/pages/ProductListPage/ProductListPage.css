@@ -1,0 +1,22 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #d1d5db;
+  padding: 8px;
+}
+th {
+  text-align: center;
+  cursor: pointer;
+}
+td {
+  text-align: left;
+}
+
+.prod_img {
+  width: 100px;
+  height: 100px;
+}

@@ -8,16 +8,19 @@ const ProductListPage = () => {
     dataState: { items, filters },
     getSortedList,
   } = useData();
-  const [output, setOutput] = useState(items);
-  useEffect(() => {
-    setOutput(getSortedList(items));
-  }, [filters]);
+  // const [output, setOutput] = useState();
+  // useEffect(() => {
+  //   setOutput(getSortedList(items));
+  // }, [filters]);
+  const output = getSortedList(items);
+
   return (
     <div>
       <FilterSection />
       <table>
         <thead>
           <tr>
+            <th>Image</th>
             <th>Name</th>
             <th>Description</th>
             <th>Price</th>
@@ -28,6 +31,9 @@ const ProductListPage = () => {
         <tbody>
           {output.map((prod) => (
             <tr className="prod" key={prod.id}>
+              <td>
+                <img src={prod.imageUrl} alt={prod.name} className="prod_img"/>
+              </td>
               <td>{prod.name}</td>
               <td>{prod.description}</td>
               <td>{prod.price}</td>

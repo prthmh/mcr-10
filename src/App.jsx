@@ -3,6 +3,7 @@ import InventoryPage from "./pages/InventoryPage/InventoryPage";
 import DepartmentsPage from "./pages/DepartmentsPage/DepartmentsPage";
 import PageTemplate from "./pages/PageTemplate/PageTemplate";
 import ProductListPage from "./pages/ProductListPage/ProductListPage";
+import AddNewProduct from "./pages/AddNewProduct/AddNewProduct";
 
 function App() {
   return (
@@ -29,6 +30,14 @@ function App() {
           element={
             <PageTemplate>
               <ProductListPage />
+            </PageTemplate>
+          }
+        />
+        <Route
+          path="/newProduct"
+          element={
+            <PageTemplate>
+              <AddNewProduct />
             </PageTemplate>
           }
         />

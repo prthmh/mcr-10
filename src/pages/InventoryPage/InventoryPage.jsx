@@ -11,10 +11,19 @@ const InventoryPage = () => {
   } = useData();
   console.log(items);
   return (
-    <div>
-      <p>Total Stock: {getTotStock(items)}</p>
-      <p>Total Delivered: {getTotDelivered(items)}</p>
-      <p>Low Stock: {getLowStock(items)}</p>
+    <div className="inventroy">
+      <div className="inventory_item" >
+        <span style={{ color: "green" }}>{getTotStock(items)}</span>
+        <p>Total Stock</p>
+      </div>
+      <div className="inventory_item">
+        <span style={{ color: "orange" }}>{getTotDelivered(items)}</span>
+        <p>Total Delivered</p>
+      </div>
+      <div className="inventory_item">
+        <span style={{ color: "red" }}>{getLowStock(items)}</span>
+        <p>Low Stock</p>
+      </div>
     </div>
   );
 };

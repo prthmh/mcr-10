@@ -1,6 +1,6 @@
 .page_template {
   display: flex;
-  height: 100vh;
+  height: 200vh;
 }
 .nav_section {
   flex-basis: 15%;

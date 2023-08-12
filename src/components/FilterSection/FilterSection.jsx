@@ -1,6 +1,7 @@
 import React from "react";
 import "./FilterSection.css";
 import { useData } from "../../context/DataContext";
+import { NavLink } from "react-router-dom";
 
 const FilterSection = () => {
   const { dataDispatch } = useData();
@@ -35,6 +36,9 @@ const FilterSection = () => {
         <option value="price">Price</option>
         <option value="stock">Stock</option>
       </select>
+      <NavLink to="/newProduct">
+        <button className="add_button" >Add New</button>
+      </NavLink>
     </div>
   );
 };

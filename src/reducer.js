@@ -1,5 +1,8 @@
 export const dataReducer = (dataState, { type, payload }) => {
   switch (type) {
+    case "SET_STATE":
+      dataState = payload;
+      break;
     case "DEPARTMENT_CHANGE":
       dataState = {
         ...dataState,
@@ -30,8 +33,13 @@ export const dataReducer = (dataState, { type, payload }) => {
         },
       };
       break;
+    case "ADD_PRODUCT":
+      dataState = { ...dataState, items: [...dataState.items, payload] };
+      break;
     default:
       break;
   }
+
+  localStorage.setItem("mcr10", JSON.stringify(dataState));
   return dataState;
 };
